@@ -7,8 +7,7 @@ import {Route, Routes} from 'react-router-dom'
 import ProductList from "./component/ProductList/ProductList";
 
 function App() {
-    const {onToggleButton, tg} = useTelegram()
-
+    const {onToggleButton, tg} = useTelegram();
 
     useEffect(() => {
         tg.ready();
@@ -16,11 +15,10 @@ function App() {
 
     return (
         <div className="App">
-            <Header/>
+            <Header />
             <Routes>
-                <Route index element={<ProductList/>}/>
-                <Route path={'/form'} element={<Form/>}/>
-
+                <Route index element={<ProductList />}/>
+                <Route path={'form'} element={<Form />}/>
             </Routes>
         </div>
     );
