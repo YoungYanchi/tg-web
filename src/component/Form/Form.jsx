@@ -6,7 +6,7 @@ const Form = () => {
     const [country, setCountry] = useState('');
     const [city, setCity] = useState('');
     const [number, setNumber] = useState('');
-    const [subject, setSubject] = useState('');
+    const [subject, setSubject] = useState('physical');
     const {tg} = useTelegram();
 
     useEffect(() => {
