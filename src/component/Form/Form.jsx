@@ -28,17 +28,17 @@ const Form = () => {
 
     useEffect(() => {
         tg.MainButton.setParams({
-            text: 'Отправить данные'
+            text: 'Отправить анкету'
         })
     }, [])
 
     useEffect(() => {
-        if(!city || !country) {
+        if(!city || !country || !phoneNumber) {
             tg.MainButton.hide();
         } else {
             tg.MainButton.show();
         }
-    }, [country, city, number])
+    }, [country, city, phoneNumber])
 
     const onChangeCountry = (e) => {
         setCountry(e.target.value)
