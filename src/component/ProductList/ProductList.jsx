@@ -4,11 +4,11 @@ import ProductItem from "../ProductItem/ProductItem";
 import {useTelegram} from "../hooks/useTelegram";
 
 const products = [
-    {id: '1', title: "Распаковка Личности Lite", price: '100', description: 'Включает в себя распакову без контента'},
-    {id: '2', title: "Распаковка Личности Pro", price: '500', description: 'Включает в себя распакову + контент стратегию'},
-    {id: '3', title: "Консультация", price: '222', description: 'Консультация по теме контента на вашу тематику'},
-    {id: '3', title: "Коучинг", price: '500', description: 'Бери лапату и погнали за баблишком!'},
-    {id: '3', title: "Наставник", price: '9999', description: 'Теперь тебе не понадобится даже лапата!'},
+    {id: '1', title: "Распаковка Личности Lite", price: 10000, description: 'Включает в себя распакову без контента'},
+    {id: '2', title: "Распаковка Личности Pro", price: 20000, description: 'Включает в себя распакову + контент стратегию'},
+    {id: '3', title: "Консультация", price: 5000, description: 'Консультация по теме контента на вашу тематику'},
+    {id: '3', title: "Коучинг", price: 15000, description: 'Бери лапату и погнали за баблишком!'},
+    {id: '3', title: "Наставник", price: 99999, description: 'Теперь тебе не понадобится даже лапата!'},
 ]
 
 const getTotalPrice = (items = []) => {
