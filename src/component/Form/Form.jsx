@@ -5,7 +5,7 @@ import {useTelegram} from "../hooks/useTelegram";
 const Form = () => {
     const [country, setCountry] = useState('');
     const [city, setCity] = useState('');
-    const [number, setNumber] = useState('');
+    const [phoneNumber, setPhoneNumber] = useState('');
     const [subject, setSubject] = useState('physical');
     const {tg} = useTelegram();
 
@@ -13,7 +13,8 @@ const Form = () => {
         const data = {
             country,
             city,
-            subject
+            subject,
+            phoneNumber
         }
         tg.sendData(JSON.stringify(data));
     }, [country, city, subject])
@@ -46,8 +47,8 @@ const Form = () => {
     const onChangeStreet = (e) => {
         setCity(e.target.value)
     }
-    const onChangeNumber = (e) => {
-        setNumber(e.target.value)
+    const onChangePhoneNumber = (e) => {
+        setPhoneNumber(e.target.value)
     }
 
     const onChangeSubject = (e) => {
@@ -76,12 +77,12 @@ const Form = () => {
                 className={'input'}
                 type="text"
                 placeholder={'Номер телефона'}
-                value={number}
-                onChange={onChangeNumber}
+                value={phoneNumber}
+                onChange={onChangePhoneNumber}
             />
             <select value={subject} onChange={onChangeSubject} className={'select'}>
-                <option value={'physical'}>Мужчина</option>
-                <option value={'legal'}>Женщина</option>
+                <option value={'man'}>Мужчина</option>
+                <option value={'women'}>Женщина</option>
             </select>
         </div>
     );
